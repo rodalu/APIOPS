@@ -1,4 +1,4 @@
-name: Azure Login with OpenID
+name: Azure Login
 on: [push]
 permissions:
       id-token: write
