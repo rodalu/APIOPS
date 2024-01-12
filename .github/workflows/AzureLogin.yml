@@ -1,7 +1,8 @@
+name: Azure Login with OpenID
 on: [push]
- 
-name: AzureLogin
- 
+permissions:
+      id-token: write
+      contents: read 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
