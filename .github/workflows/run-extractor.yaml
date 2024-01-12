@@ -1,3 +1,28 @@
+name: Run - Extractor
+
+on:
+  workflow_dispatch:
+    inputs:
+      CONFIGURATION_YAML_PATH:
+        description: 'Choose Wether to extract all Apis or extract apis listed an extraction configuration file'     
+        required: true
+        type: choice
+        options:
+        - Extract All APIs
+        - configuration.extractor.yaml
+      API_SPECIFICATION_FORMAT:
+        description: 'API Specification Format'     
+        required: true
+        type: choice
+        options:
+        - OpenAPIV3Yaml 
+        - OpenAPIV3Json
+        - OpenAPIV2Yaml
+        - OpenAPIV2Json
+
+env:
+  apiops_release_version: v5.0.1
+
 parameters:
 
   - name: APIM_INSTANCE_NAME
