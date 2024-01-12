@@ -1,3 +1,5 @@
+on: [push]
+
 parameters:
   - name: API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH
     type: string
