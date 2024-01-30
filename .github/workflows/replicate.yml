@@ -1,0 +1,31 @@
+- task: CmdLine@2
+  displayName: pull
+  inputs:
+    script: |
+      git -C secondary-repository checkout main
+
+- task: CmdLine@2
+  displayName: add
+  inputs:
+    script: |
+      git -C secondary-repository add --all
+
+- task: CmdLine@2
+  displayName: commit
+  continueOnError: true
+  inputs:
+    script: |
+      git -C secondary-repository commit -m "Azure Pipeline Repository Integration"
+
+- task: CmdLine@2
+  displayName: status
+  inputs:
+    script: |
+      git -C secondary-repository status
+
+
+- task: CmdLine@2
+  displayName: push
+  inputs:
+    script: |
+      git -C secondary-repository push -u origin main
