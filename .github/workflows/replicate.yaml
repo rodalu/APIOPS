@@ -1,7 +1,7 @@
 # import multiple remote git repositories to local Source dir
 
  param (
-  [string]$localFolder = "c:\Source\",
+  [string]$localFolder = "C:\Users\rodel.boy.aluzan\Downloads\APIOPS-main.zip",
   [array]$repos = @("myRepo", "repo1")
  )
 $repoLocation = "https://github.com/rodalu/APIOPS.git"
