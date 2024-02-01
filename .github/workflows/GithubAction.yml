@@ -16,13 +16,13 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: rodalu/Copy-to-Another-Repository@v1
+      - uses: rodalu/APIOPS
         with:
 
           # required parameters
           target-filepath: 'README.md'      # file path to copy
-          output-branch: 'main or master'   # branch name to create pull request
-          output-repo: 'Owner/AnotherRepository'
+          output-branch: 'main'   # branch name to create pull request
+          output-repo: 'rodalu/AnotherRepository'
           git-token: ${{ secrets.TOKEN_TO_ACCESS_OUTPUT_REPO }}
           
           # optional parameters and default values
