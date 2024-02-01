@@ -14,10 +14,10 @@ jobs:
     # While cloning the repository:
     #   - it clones the repo into the given `path`
     #   - it checks out the branch defined at `ref`
-    - name: Clone supercharge docs repository
+    - name: APIOPS
       uses: actions/checkout@v2
       with:
-        repository: supercharge/docs
+        repository: APIOPS
         path: https://github.com/rodalu/
         ref: 2.x
 
