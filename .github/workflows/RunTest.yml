@@ -1,0 +1,25 @@
+name: Run tests
+
+on: [push, pull_request]
+
+jobs:  
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone APIOPS
+      uses: actions/checkout@v2
+
+    # This part here is cloning a second repository
+    # While cloning the repository:
+    #   - it clones the repo into the given `path`
+    #   - it checks out the branch defined at `ref`
+    - name: Clone supercharge docs repository
+      uses: actions/checkout@v2
+      with:
+        repository: supercharge/docs
+        path: https://github.com/rodalu/
+        ref: 2.x
+
+    - name: …
+      run: …v
