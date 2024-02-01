@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clone APIOPS
+    - name: APIOPS
       uses: actions/checkout@v2
 
     # This part here is cloning a second repository
@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: APIOPS
-        path: https://github.com/rodalu/
+        path: https://github.com/rodalu/NodeJS
         ref: 2.x
 
     - name: …
