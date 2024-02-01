@@ -8,43 +8,7 @@ on:
 
 jobs:
     
-  job-public-repo-ubuntu:
-    runs-on: ubuntu-latest
-    steps:
-      
-      - name: rodel Aluzan/poc-github-actions PUBLIC repository
-        uses: Rodel aluzan/clone-github-repo-action@main
-        with:
-          owner: 'rodel'
-          repository: 'poc-github-actions'
-      
-      - name: Access cloned repository content
-        run: |
-          echo "ROOT"
-          ls -la
-          echo "CLONED REPO"
-          cd poc-github-actions
-          ls -la
-
-  job-public-repo-macos:
-    runs-on: macos-latest
-    steps:
-      
-      - name: APIOPS/poc-github-actions PUBLIC repository
-        uses: APIOPS/clone-github-repo-action@main
-        with:
-          owner: 'Rodel Aluzan'
-          repository: 'poc-github-actions'
-      
-      - name: Access cloned repository content
-        run: |
-          echo "ROOT"
-          ls -la
-          echo "CLONED REPO"
-          cd poc-github-actions
-          ls -la
-
-  job-public-repo-windows:
+ job-public-repo-windows:
     runs-on: windows-latest
     steps:
       
