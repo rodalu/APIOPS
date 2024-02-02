@@ -15,14 +15,14 @@ jobs:
       - name: APIOPS/poc-github-actions PUBLIC repository
         uses: rodalu/APIOPS@main
         with:
-          owner: 'Rodel Aluzan'
-          repository: 'poc-github-actions'
+          owner: 'rodalu'
+          repository: 'APIOPSs'
       
       - name: Access cloned repository content
         run: |
           echo "ROOT"
           ls -la
           echo "CLONED REPO"
-          cd APIOPS
+          cd APIOPS2
           ls -la
         shell: bash
