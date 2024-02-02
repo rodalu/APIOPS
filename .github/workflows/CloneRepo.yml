@@ -13,7 +13,7 @@ jobs:
     steps:
       
       - name: APIOPS/poc-github-actions PUBLIC repository
-        uses: Rodel Alu/APIOPS@main
+        uses: rodalu/APIOPS@main
         with:
           owner: 'Rodel Aluzan'
           repository: 'poc-github-actions'
