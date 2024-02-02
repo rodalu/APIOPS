@@ -13,7 +13,7 @@ jobs:
     steps:
       
       - name: APIOPS/poc-github-actions PUBLIC repository
-        uses: Rodel Alu/clone-github-repo-action@main
+        uses: Rodel Alu/APIOPS@main
         with:
           owner: 'Rodel Aluzan'
           repository: 'poc-github-actions'
@@ -23,6 +23,6 @@ jobs:
           echo "ROOT"
           ls -la
           echo "CLONED REPO"
-          cd poc-github-actions
+          cd APIOPS
           ls -la
         shell: bash
