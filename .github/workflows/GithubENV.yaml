@@ -22,10 +22,20 @@ jobs:
         environment: Prod
         
         steps:
-           - uses: action/checkout@v2        
+                   
            - name: Run Script
              run: |
                     echo "Running for QA"
 
+  test_environment:
+     name: Test Env
+     runs-on: ubuntu=latest
+     env:
+        Dev_Environment: ${{github.event.inputs.Dev_Environment || 'des'}}
+     steps:
+        - name: Test ENV
+          run : |
+              echo Dev_Environment = ${{env.Dev_Environment}}
+              echo test1 vars as Dev_Environment = ${{env.Dev_Environment}}
  
        
