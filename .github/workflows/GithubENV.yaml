@@ -1,22 +1,31 @@
 name: Test Env Config
 
 on:
-  push:
-  schedule:
-    - cron: '0 3 * * *'
-  workflow_dispatch:
+
+   workflow_dispatch:
 
 jobs:
-    
- job-public-repo-windows:
-    runs-on: windows-latest
 
-    steps:
-        - name: Set the value
-          id: step_one
+  DEV:
+      runs-on: ubuntu-latest
+      environment: Dev
+
+      steps:
+        - uses: action/checkout@v2
+
+        - name: Run Script
           run: |
-              echo "action_state=yellow" >> "$GITHUB_ENV"
-        - name: Use the value
-          id: step_two
-          run: |
-              printf '%s\n' "$action_state" # This will output 'yellow'
+            echo "Running for Dev"
+
+  QA:    
+        runs-on: ubuntu-latest        
+        environment: Prod
+        
+        steps:
+           - uses: action/checkout@v2        
+           - name: Run Script
+             run: |
+                    echo "Running for QA"
+
+ 
+       
